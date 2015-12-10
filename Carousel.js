@@ -124,8 +124,8 @@ var Carousel = React.createClass({
       activePage: activePage
     });
 
-    this._animateNextPage();
-    
+    // this._animateNextPage(); // this extra call was causing an unnecessary looping. Now works perfectly.
+
     if (this.props.onPageChange) {
       this.props.onPageChange(activePage);
     }
